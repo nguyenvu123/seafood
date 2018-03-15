@@ -10,7 +10,6 @@
 <body <?php body_class(); ?>>
 <div id="wrapper" class="hfeed">
 <header id="header" role="banner">
-	<?php var_dump(get_template_directory_uri()); ?>
 	<div class="row">
 		<div class="col-3 logo">
 			<img src="">
