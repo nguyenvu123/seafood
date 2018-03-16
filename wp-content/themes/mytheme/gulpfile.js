@@ -11,8 +11,8 @@ var gulp = require('gulp'),
 
     gulp.task('serve', ['sass'], function() {
     
-    browserSync.init({
-        server: "./"
+     browserSync.init({
+        proxy: 'sml.dev' 
     });
 
     gulp.watch("./source/sass/main.scss", ['sass']);
