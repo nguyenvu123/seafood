@@ -1,0 +1,21 @@
+.container{
+	max-width: 1330px;
+	margin: 0 auto;
+}
+.row{
+	width: 100%;
+	position: relative;
+	padding: 15px;
+}
+@media screen and (min-width: 768px) {
+  @for $i from 1 through 10 {
+    .col-#{$i} {
+      width: 100% / 10 * $i; 
+    }
+  }
+} 
+#menu-main-menu{ 
+	display: flex; 
+	float: right; 
+	
+}
