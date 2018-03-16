@@ -8,15 +8,13 @@
 	padding: 15px;
 }
 @media screen and (min-width: 768px) {
-  @for $i from 1 through 10 {
+  @for $i from 1 through 10 { 
     .col-#{$i} {
       width: 100% / 10 * $i;  
     }
   }
 } 
 #menu-main-menu{ 
-	display: flex; 
+	display: flex;
 	float: right; 
-	display: none;
-	
 }
