@@ -13,7 +13,7 @@ var gulp = require('gulp'),
     gulp.task('serve', ['sass'], function() {
     
     browserSync.init({
-        proxy: 'sml.dev' 
+        proxy: 'seafood.me' 
     });
 
     gulp.watch("./wp-content/themes/mytheme/source/sass/main.scss", ['sass']);
