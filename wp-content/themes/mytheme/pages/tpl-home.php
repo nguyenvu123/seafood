@@ -7,7 +7,8 @@ Template Name: home page
 
 	<div>
 		 <?php echo __('home page', "html") ?> 
-		 <h1>c</h1>    
+		 <h1>c</h1>   
+		 <h2>cod dev2 </h2> 
 
 	</div>
 
