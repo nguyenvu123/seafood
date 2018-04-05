@@ -8,6 +8,7 @@ Template Name: home page
 	<div>
 		 <?php echo __('home page', "html") ?> 
 		 <h1>master</h1>   
+		 <h1>dev1</h1>
 		 
 
 	</div>
