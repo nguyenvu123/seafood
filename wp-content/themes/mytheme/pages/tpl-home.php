@@ -12,7 +12,7 @@ Template Name: home page
 	</div>
 	<div class="dev1-sua">
 	</div>
-	<div class="new">
+	<div class="new-mới">
 		
 	</div>
 <?php get_footer(); ?>
