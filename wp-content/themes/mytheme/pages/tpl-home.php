@@ -12,6 +12,9 @@ Template Name: home page
 	</div>
 	<div class="dev2">
 		<h1>kdfjkdjfkdjfk</h1>
+
+	<div class="dev1">
+		<h1>adbdlkdlfk</h1>
 	</div>
 
 <?php get_footer(); ?>
