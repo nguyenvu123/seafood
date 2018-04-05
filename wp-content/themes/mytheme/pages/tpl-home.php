@@ -10,7 +10,7 @@ Template Name: home page
 		 <h1>master</h1>   
 		 <h1>dev1</h1>
 	</div>
-	<div class="dev1">
+	<div class="dev1-sua">
 	</div>
 	<div class="new">
 		
