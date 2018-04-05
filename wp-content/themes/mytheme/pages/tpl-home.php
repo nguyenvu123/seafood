@@ -13,4 +13,8 @@ Template Name: home page
 		
 
 	</div>
+
+	<div class="d2 muôn">
+		
+	</div>
 <?php get_footer(); ?>
