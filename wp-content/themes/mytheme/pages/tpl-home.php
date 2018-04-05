@@ -12,4 +12,7 @@ Template Name: home page
 	<div class="dev1">
 		
 	</div>
+	<div class="dev2">
+		
+	</div>
 <?php get_footer(); ?>
