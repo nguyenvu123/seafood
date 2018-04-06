@@ -8,8 +8,5 @@ Template Name: home page
 	<div>
 		 <?php echo __('home page', "html") ?> \
 		 <h1>hgfjghfj</h1>
-	
 	</div>
-	
-
 <?php get_footer(); ?>
