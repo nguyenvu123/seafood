@@ -13,7 +13,7 @@ var gulp = require('gulp'),
     gulp.task('serve', ['sass'], function() {
     
      browserSync.init({
-        proxy: './' 
+        proxy: './'
     });
 
     gulp.watch("./source/sass/*.scss", ['sass']); 

@@ -10,6 +10,6 @@ Template Name: home page
 	
 	</div>
 	<div class="dev1">
-		
+		dfg dfgdfg tao hoi may ma
 	</div>
 <?php get_footer(); ?>
