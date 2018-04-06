@@ -1,6 +1,6 @@
-<div class="clear"></div>
+
 </div>
-<footer id="footer" role="contentinfo">
+<footer class="container" id="footer" role="contentinfo">
 forter
 </footer>
 </div>

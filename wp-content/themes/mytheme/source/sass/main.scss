@@ -2,20 +2,26 @@
 	max-width: 1330px;
 	margin: 0 auto;
 }
-.row{
+.row{ 
 	width: 100%;
 	position: relative;
 	padding: 15px;
+	display: flex;
 }
 @media screen and (min-width: 768px) {
   @for $i from 1 through 10 { 
     .col-#{$i} {
-      width: 100% / 10 * $i;  
+      width: 100% / 10 * $i;   
     }
-  }
-} 
-#menu-main-menu{ 
-	display: flex;
-	float: right; 
+  } 
+}   
+
+#header{
+   background: black;
+   color: white;
 }
+
+
+
+
 

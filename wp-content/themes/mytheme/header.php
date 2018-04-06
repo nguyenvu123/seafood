@@ -4,7 +4,10 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
- <?php wp_enqueue_style ('theme-style', get_template_directory_uri().'/gulp-file/main.css');  ?>  
+ <?php wp_enqueue_style ('theme-style', get_template_directory_uri().'/gulp-file/main.css');  ?>
+
+ <?php wp_enqueue_script ('theme-js', get_template_directory_uri().'/gulp-file/script.js');  ?> 
+
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

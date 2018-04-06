@@ -1,4 +1,5 @@
 *.txt
 test.php
 test2.php
+node_modules/*
 
