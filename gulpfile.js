@@ -15,8 +15,8 @@
 
 // gulp.task('js', function(){
 //    gulp.src([
-//    	'./wp-content/themes/mytheme/source/js/*.js',
-//    	'./node_modules/jquery/dist/jquery/*.js'
+//    	// './wp-content/themes/mytheme/source/js/*.js',
+//    	'./node_modules/jquery/dist/*.js'
 
 //    	])
 //    .pipe(concat('script.js'))
