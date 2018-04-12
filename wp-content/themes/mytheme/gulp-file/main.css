@@ -31,5 +31,18 @@
     width: 100%; } }
 
 #header {
-  background: black;
+  background-color: rgba(47, 47, 47, 0.5);
   color: white; }
+  #header .logo img {
+    width: 40%; }
+  #header .menu ul {
+    display: flex;
+    height: 100%;
+    align-items: center; }
+    #header .menu ul li {
+      padding: 10px;
+      list-style: none; }
+      #header .menu ul li a {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none; }

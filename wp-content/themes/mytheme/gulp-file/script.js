@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".slick-home").slick()});
+!function(c){c(document).ready(function(){c(".slick-home").slick()})}(jQuery);

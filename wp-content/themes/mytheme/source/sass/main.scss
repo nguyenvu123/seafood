@@ -12,13 +12,34 @@
   @for $i from 1 through 10 { 
     .col-#{$i} {
       width: 100% / 10 * $i;   
-    }
+    } 
   } 
 }   
 
 #header{
-   background: black;
+   background-color: rgba(47,47,47,.5); 
    color: white;
+   .logo{
+    img{
+      width: 40%
+    }
+   }
+   .menu{
+    ul{
+      display: flex;
+      height: 100%;
+      align-items: center;
+      li{
+        padding: 10px;
+        list-style: none;
+        a{
+          color: white;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+      }
+    }
+   }
 }
 
 

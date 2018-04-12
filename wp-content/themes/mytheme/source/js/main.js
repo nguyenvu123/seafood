@@ -1,3 +1,11 @@
-$(document).ready(function(){
+(function($) {
+ 
+ $(document).ready(function(){
    $('.slick-home').slick();
 });
+
+
+})(jQuery);
+
+
+

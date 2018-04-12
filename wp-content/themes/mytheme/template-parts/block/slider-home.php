@@ -26,10 +26,10 @@
 <div class="slick-home">
 	<?php 
 	for ($i =0; $i< sizeof($lists); $i++){ ?>
-	<?php $k = get_the_post_thumbnail_url($lists[$i]->ID); ?>
+	<?php $img = get_the_post_thumbnail_url($lists[$i]->ID); ?>
 
 	<div class="items">
-		<img src="<?= $k ?>">
+		<img src="<?= $img ?>">
 	</div>
 	<?php } ?>
 </div>
