@@ -27,8 +27,13 @@ img{
 #header{
    min-height: 800px;
    color: white;
+   
    .include-menu{
     background-color: rgba(47,47,47,.5); 
+    background-color: rgba(47, 47, 47, 0.5);
+    position: absolute;
+    width: 100%;
+    z-index: 99;
    }
    .logo{
     img{
@@ -41,7 +46,7 @@ img{
       height: 100%;
       align-items: center;
       li{
-        padding: 10px;
+        padding: 10px; 
         list-style: none;
         a{
           color: white;
@@ -55,13 +60,11 @@ img{
     }
    }
    .img{
-    background-image: url('./../source/images/image-header.jpg'); 
+    top: 0;
+    z-index: -1;
     min-height: 832px;
     width: 100%;
     display: block;
-    position: absolute;
-    top: 0;
-    z-index: -1;
     background-size: cover;
     background-repeat: no-repeat;
    }
@@ -76,12 +79,39 @@ img{
         font-size: 70px;
       }
    }
+   .slider-home{
+    .slick-prev{
+      position: absolute;
+      z-index: 99;
+      top: 50%;
+      left: 0;
+      left: 3%;
+      font-size: 38px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .slick-next{
+       position: absolute;
+      z-index: 99;
+      top: 50%;
+      right: 0;
+      right: 3%;
+      font-size: 38px;
+        &:hover{
+        cursor: pointer;
+      }
+    }
+   }
 }
 
 #home-content{
+  padding-top: 60px;
+  padding-bottom: 146px;
   background-color: #efeee9;
   .traditional{
     background: white;
+    padding-top: 53px;
     .title{
       p{
         font-size: 60px;
@@ -97,6 +127,9 @@ img{
       .items{
         img{
           width: 100%;
+        }
+        p{
+          padding: 10px;
         }
       }
     }
@@ -128,6 +161,7 @@ img{
     }
     .row{
       p{
+        line-height: 60px;  
         font-size: 26px;
         padding-bottom: 40px;
         text-align: center;
@@ -172,9 +206,12 @@ img{
   }
 }
 footer{
-  background: black;
+  position: relative;
+  background: #efeee9;
+  z-index: 2;
   .section-footer{
-    background: #f9eae4;
+    padding-top: 81px;
+    background: #f9eae4;;
     .title{
       font-size: 45px;
       text-align: center;
@@ -184,10 +221,41 @@ footer{
       font-size: 20px;
       font-weight: 500;
       padding-bottom: 48px;
+      text-align: center;
     }
     .Time{
       text-align: center;
     }
+    .newletter{
+      padding: 20px;
+      border: 1px solid;
+      text-align: center;
+      width: 58%;
+      margin: 0 auto;
+      a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+    }
+    .map{
+      iframe{
+        max-width: 100%;
+      }
+    }
+  }
+  .bg{
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background: black;
+    bottom: 0;
+    z-index: -1;
+  }
+  .info{
+    color: #fbfbfb;
+    text-align: center;
+    padding: 10px;
   }
 }
 

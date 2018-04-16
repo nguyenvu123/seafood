@@ -20,25 +20,31 @@
 				</div>
 				<div class="col-8 menu">
 					<ul>
-						<li><a href="#">Trang chủ</a></li>
-						<li><a href="#">Nhà hàng</a></li>
-						<li><a href="#">Dịch vụ</a></li>
-						<li><a href="#">Hình ảnh</a></li>
-						<li><a href="#">Liên hệ</a></li>
-						<li><a href="#">Dặt chỗ</a></li>
+						<?php wp_nav_menu('main-menu');?>
 					</ul>
 				</div>	
 			</div>
 	</div>
 	</div>
-	
-	<div class="img">
-		
-	</div>
-	<div class="text">
-		<p>
-			Risotteria Melotti NYC
-		</p>
-	</div>
-	
+	 <div class="slider-home">
+	 	<div class="slider__home--content">
+	 		<?php if( have_rows('imgs','option') ):
+			    while ( have_rows('imgs','option') ) : the_row(); ?>
+				    <div class="slider__home--item">
+						<div class="img" style="background-image: url('<?= get_sub_field('img') ?>'); ">
+						</div>
+						<!-- <div class="text">
+							<p>
+								<?php the_sub_field('text'); ?>
+
+
+							</p>
+						</div> -->	
+				    </div>   
+
+			    <?php endwhile;
+			    	endif;
+			    ?>
+	 	</div>
+     </div>
 </header>

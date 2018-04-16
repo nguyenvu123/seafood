@@ -6,7 +6,7 @@
 			<div class="icon">
 				
 			</div>
-			<div>
+			<div class="newletter">
 				<a href="">Newsletter</a>
 			</div>
 		</div>

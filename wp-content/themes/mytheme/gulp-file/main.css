@@ -59,7 +59,11 @@ img {
   min-height: 800px;
   color: white; }
   #header .include-menu {
-    background-color: rgba(47, 47, 47, 0.5); }
+    background-color: rgba(47, 47, 47, 0.5);
+    background-color: rgba(47, 47, 47, 0.5);
+    position: absolute;
+    width: 100%;
+    z-index: 99; }
   #header .logo img {
     width: 40%; }
   #header .menu ul {
@@ -77,13 +81,11 @@ img {
         font-weight: 600;
         font-size: 14px; }
   #header .img {
-    background-image: url("./../source/images/image-header.jpg");
+    top: 0;
+    z-index: -1;
     min-height: 832px;
     width: 100%;
     display: block;
-    position: absolute;
-    top: 0;
-    z-index: -1;
     background-size: cover;
     background-repeat: no-repeat; }
   #header .text {
@@ -95,11 +97,32 @@ img {
     border-bottom: 2px solid; }
     #header .text p {
       font-size: 70px; }
+  #header .slider-home .slick-prev {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 0;
+    left: 3%;
+    font-size: 38px; }
+    #header .slider-home .slick-prev:hover {
+      cursor: pointer; }
+  #header .slider-home .slick-next {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    right: 0;
+    right: 3%;
+    font-size: 38px; }
+    #header .slider-home .slick-next:hover {
+      cursor: pointer; }
 
 #home-content {
+  padding-top: 60px;
+  padding-bottom: 146px;
   background-color: #efeee9; }
   #home-content .traditional {
-    background: white; }
+    background: white;
+    padding-top: 53px; }
     #home-content .traditional .title p {
       font-size: 60px;
       text-align: center; }
@@ -109,6 +132,8 @@ img {
       padding-top: 51px; }
     #home-content .traditional .include-items .items img {
       width: 100%; }
+    #home-content .traditional .include-items .items p {
+      padding: 10px; }
   #home-content .second-block {
     background: #ffffdf;
     margin-top: 107px;
@@ -132,6 +157,7 @@ img {
         right: 50%;
         bottom: -17px; }
     #home-content .second-block .row p {
+      line-height: 60px;
       font-size: 26px;
       padding-bottom: 40px;
       text-align: center; }
@@ -164,8 +190,11 @@ img {
         padding-top: 15px; }
 
 footer {
-  background: black; }
+  position: relative;
+  background: #efeee9;
+  z-index: 2; }
   footer .section-footer {
+    padding-top: 81px;
     background: #f9eae4; }
     footer .section-footer .title {
       font-size: 45px;
@@ -174,6 +203,30 @@ footer {
     footer .section-footer p {
       font-size: 20px;
       font-weight: 500;
-      padding-bottom: 48px; }
+      padding-bottom: 48px;
+      text-align: center; }
     footer .section-footer .Time {
       text-align: center; }
+    footer .section-footer .newletter {
+      padding: 20px;
+      border: 1px solid;
+      text-align: center;
+      width: 58%;
+      margin: 0 auto; }
+      footer .section-footer .newletter a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px; }
+    footer .section-footer .map iframe {
+      max-width: 100%; }
+  footer .bg {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background: black;
+    bottom: 0;
+    z-index: -1; }
+  footer .info {
+    color: #fbfbfb;
+    text-align: center;
+    padding: 10px; }

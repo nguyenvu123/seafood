@@ -1,1 +1,1 @@
-!function(c){c(document).ready(function(){c(".slick-home").slick()})}(jQuery);
+!function(r){r(document).ready(function(){r(".slider__home--content").slick({nextArrow:'<i class=" slick-prev fa fa-long-arrow-left" aria-hidden="true"></i>',prevArrow:'<i class=" slick-next fa fa-long-arrow-right" aria-hidden="true"></i>'})})}(jQuery);
