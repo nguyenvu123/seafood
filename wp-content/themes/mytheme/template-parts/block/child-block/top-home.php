@@ -9,7 +9,7 @@
 							<?php  
 							if( have_rows('imgs') ):
     							while ( have_rows('imgs') ) : the_row(); ?>
-	    							<div class="col-4">
+	    							<div class="col-3">
 										<img src="<?php the_sub_field('image'); ?>">
 										<p><?php the_sub_field('name'); ?></p>
 									</div>

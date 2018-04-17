@@ -5,13 +5,14 @@ img {
   width: 100%; }
 
 .container {
-  max-width: 1330px;
+  max-width: 1160px;
   margin: 0 auto; }
 
 .row {
   width: 100%;
   position: relative;
-  display: flex; }
+  display: flex;
+  margin: 0 !important; }
 
 @media screen and (min-width: 768px) {
   .col-1 {
@@ -64,11 +65,12 @@ img {
     position: absolute;
     width: 100%;
     z-index: 99; }
+    #header .include-menu .row {
+      display: flex; }
   #header .logo img {
     width: 40%; }
   #header .menu ul {
     display: flex;
-    height: 100%;
     align-items: center; }
     #header .menu ul li {
       padding: 10px;
@@ -87,7 +89,8 @@ img {
     width: 100%;
     display: block;
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-position: center; }
   #header .text {
     position: absolute;
     top: 50%;
@@ -179,12 +182,12 @@ img {
       text-align: center;
       font-size: 45px;
       padding-bottom: 64px; }
-    #home-content .section-contact .row .col-3 {
+    #home-content .section-contact .row .box-contact {
       text-align: center; }
-      #home-content .section-contact .row .col-3 img {
+      #home-content .section-contact .row .box-contact img {
         width: 50%;
         border-radius: 50%; }
-      #home-content .section-contact .row .col-3 p {
+      #home-content .section-contact .row .box-contact p {
         font-size: 30px;
         font-size: 30px;
         padding-top: 15px; }
@@ -230,3 +233,96 @@ footer {
     color: #fbfbfb;
     text-align: center;
     padding: 10px; }
+
+.menu-mobile-icon {
+  display: none; }
+
+@media screen and (max-width: 767px) {
+  .menu-mobile-icon {
+    width: 100%;
+    display: block; }
+    .menu-mobile-icon i {
+      float: right;
+      margin-right: 12px;
+      font-size: 38px; }
+  #header .menu ul {
+    display: block; }
+  #header {
+    position: relative; }
+  .menu {
+    width: 100%;
+    position: absolute;
+    transform: translateX(50%);
+    text-align: center;
+    top: 94%;
+    right: 50%;
+    display: none; }
+    .menu ul {
+      background: #131212; }
+    .menu.show-menu-mobile {
+      display: block; }
+  .menu-mobile-icon {
+    width: 100%;
+    display: block; }
+    .menu-mobile-icon i {
+      float: right;
+      margin-right: 12px;
+      font-size: 38px; }
+  .row {
+    display: block; }
+  #home-content .traditional .title p, #home-content .second-block .title-main, #home-content .section-contact .title {
+    font-size: 30px; } }
+
+.section-menu {
+  background: #efeee9; }
+  .section-menu .container {
+    padding-left: 10%;
+    padding-right: 10%; }
+  .section-menu .top-menu {
+    padding: 47px 0px;
+    border-bottom: 1px solid; }
+    .section-menu .top-menu .main-title {
+      text-align: center;
+      color: #9e3b3c;
+      font-size: 55px; }
+    .section-menu .top-menu .sub {
+      text-align: center;
+      color: #9e3b3c;
+      padding-top: 15px; }
+    .section-menu .top-menu .pri {
+      font-weight: bold; }
+  .section-menu .items {
+    border-bottom: 1px solid;
+    padding-top: 30px;
+    padding-bottom: 25px; }
+    .section-menu .items .title {
+      font-size: 20px;
+      color: red;
+      padding-bottom: 14px; }
+    .section-menu .items .content {
+      line-height: 31px; }
+      .section-menu .items .content .pri {
+        float: right; }
+  .section-menu .dri {
+    padding: 35px 0px; }
+    .section-menu .dri .top-title {
+      text-align: center;
+      font-size: 45px;
+      color: red; }
+    .section-menu .dri .title-sub {
+      text-align: center;
+      font-size: 21px;
+      padding-top: 21px;
+      color: red; }
+    .section-menu .dri .list-drink {
+      display: flex;
+      padding-top: 50px; }
+      .section-menu .dri .list-drink .list-left {
+        width: 50%;
+        display: inline-block; }
+      .section-menu .dri .list-drink .list-right {
+        width: 50%;
+        display: inline-block; }
+      .section-menu .dri .list-drink span {
+        float: right;
+        margin-right: 47px; }

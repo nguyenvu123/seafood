@@ -9,8 +9,11 @@
  	// loop through the rows of data
     		while ( have_rows('list') ) : the_row(); ?>
     		<div class="col-3">
-				<img src="<?php the_sub_field('image'); ?>">
+    			<div class="box-contact">
+    				<img src="<?php the_sub_field('image'); ?>">
 				<p><?php the_sub_field('text'); ?></p>
+    			</div>
+				
 			</div>
        
 			<?php

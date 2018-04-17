@@ -49,7 +49,9 @@ function evatheme_scripts() {
 	
 
  	wp_enqueue_style ('slick-style-theme',THEME_DIR.'/bower_components/slick-carousel/slick/slick-theme.css');  
+ 	// wp_enqueue_style ('boostap-style-theme',THEME_DIR.'/bower_components/bootstrap/dist/css/bootstrap.min.css'); 
   	wp_enqueue_script ('slick-js',THEME_DIR.'/bower_components/slick-carousel/slick/slick.min.js');  
+  	// wp_enqueue_script ('boostap-js-theme',THEME_DIR.'/bower_components/bootstrap/dist/js/bootstrap.min.js');
   	
   	wp_enqueue_script ('theme-js',THEME_DIR.'/gulp-file/script.js'); 
 }

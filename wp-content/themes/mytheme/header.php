@@ -15,14 +15,17 @@
 	<div class="include-menu">
 		<div class="container">	
 			<div class="row">
-				<div class="col-2 logo">
+				<div class="col-md-2 logo">
 					<img src="<?php echo THEME_DIR.'/source/images/logo.jpg' ?>">
 				</div>
-				<div class="col-8 menu">
+				<div class="col-md-10 menu col-12">
 					<ul>
 						<?php wp_nav_menu('main-menu');?>
 					</ul>
 				</div>	
+				<div class="menu-mobile-icon">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</div>
 			</div>
 	</div>
 	</div>
