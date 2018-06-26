@@ -1,0 +1,8 @@
+2018-05-02T13:06:10+00:00 CRITICAL Maximum execution time of 30 seconds exceeded
+
+2018-05-07T11:11:58+00:00 CRITICAL Call to undefined function have_rows()
+
+2018-05-07T11:15:55+00:00 CRITICAL Call to undefined function have_rows()
+
+2018-05-07T11:19:44+00:00 CRITICAL Call to undefined function have_rows()
+
