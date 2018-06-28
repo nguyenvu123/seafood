@@ -55,11 +55,8 @@ add_action( 'homepage', 'storefront_recent_products',       30 );
 add_action( 'homepage', 'storefront_featured_products',     40 );
 add_action( 'homepage', 'storefront_popular_products',      50 );
 add_action( 'homepage', 'storefront_on_sale_products',      60 );
-<<<<<<< HEAD
 add_action( 'homepage', 'storefront_best_selling_products', 70 );
-=======
-add_action( 'homepage', 'storefront_best_selling_products', 5 );
->>>>>>> d35f03db36eeed4a94099f7b4c047cd25e15cbe7
+
 
 /**
  * Posts
