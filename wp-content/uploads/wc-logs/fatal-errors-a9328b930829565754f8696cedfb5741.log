@@ -6,3 +6,5 @@
 
 2018-05-07T11:19:44+00:00 CRITICAL Call to undefined function have_rows()
 
+2018-06-28T10:00:15+00:00 CRITICAL Call to undefined method WP_Post::get_sale_price()
+
