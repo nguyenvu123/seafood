@@ -9,21 +9,10 @@
 
 ?>
 
-		</div><!-- .col-full -->
-	</div><!-- #content -->
+
 
 	<?php do_action( 'storefront_before_footer' ); ?>
-					<div class="copy-section">
-						<div class="container">
-							<div class="copy-left">
-								<p>&copy; 2016 New Shop . All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
-							</div>
-							<div class="copy-right">
-								<img src="images/card.png" alt=""/>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-					</div>
+					
 					<div class="footer-w3l">
 						<div class="container">
 							<div class="footer-grids">
@@ -69,7 +58,18 @@
 							
 						</div>
 					</div>
-					<!---footer--->
+					
+					<div class="copy-section">
+						<div class="container">
+							<div class="copy-left">
+								<p>&copy; 2016 New Shop . All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+							</div>
+							<div class="copy-right">
+								<img src="images/card.png" alt=""/>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
 
 	<?php do_action( 'storefront_after_footer' ); ?>
 

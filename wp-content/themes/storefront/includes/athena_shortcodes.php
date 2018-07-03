@@ -34,21 +34,134 @@ function athena_product_categories_functions( $atts ) {
 		);
 			$loop = new WP_Query( $args );
 				while ( $loop->have_posts() ) : $loop->the_post(); 
+					$product =  wc_get_product($post->ID);
+					var_dump($product);
 					?>
 
-					<div class="box-product">
-						<a href="<?php the_permalink(); ?>" id="id-<?php the_id(); ?>" title="<?php the_title(); ?>">
-
-							<?php if (has_post_thumbnail( $loop->post->ID )) 
-	        					echo get_the_post_thumbnail($loop->post->ID, 'shop_catalog'); 
-	        					else echo '<img src="'.woocommerce_placeholder_img_src().'" alt="product placeholder Image" width="65px" height="115px" />'; ?>
-						<h3><?php the_title(); ?></h3>
-						</a>
-						<div class="sele">
-							<p><span><?= get_post_meta( get_the_ID(), '_regular_price', true).'đ'?></span> <span><?= get_post_meta( get_the_ID(), '_sale_price', true).'đ' ?></span></p>
+						<div class="new-arrivals-w3agile">
+					<div class="container">
+						<h3 class="tittle1">Best Sellers</h3>
+						<div class="arrivals-grids">
+							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
+								<div class="grid-arr">
+									<div  class="grid-arrival">
+										<figure>		
+											<a href="single.html">
+												<div class="grid-img">
+													<img  src="wp-content/themes/storefront/source/images/p28.jpg" class="img-responsive" alt="">
+												</div>
+												<div class="grid-img">
+													<img  src="wp-content/themes/storefront/source/images/p27.jpg" class="img-responsive"  alt="">
+												</div>			
+											</a>		
+										</figure>	
+									</div>
+									<div class="ribben">
+										<p>NEW</p>
+									</div>
+									<div class="ribben1">
+										<p>SALE</p>
+									</div>
+									<div class="block">
+										<div class="starbox small ghosting"> </div>
+									</div>
+									<div class="women">
+										<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
+								<div class="grid-arr">
+									<div  class="grid-arrival">
+										<figure>		
+											<a href="single.html">
+												<div class="grid-img">
+													<img  src="wp-content/themes/storefront/source/images/p30.jpg" class="img-responsive" alt="">
+												</div>
+												<div class="grid-img">
+													<img  src="wp-content/themes/storefront/source/images/p29.jpg" class="img-responsive"  alt="">
+												</div>			
+											</a>		
+										</figure>	
+									</div>
+									<div class="ribben2">
+										<p>OUT OF STOCK</p>
+									</div>
+									<div class="block">
+										<div class="starbox small ghosting"> </div>
+									</div>
+									<div class="women">
+										<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
+								<div class="grid-arr">
+									<div  class="grid-arrival">
+										<figure>		
+											<a href="single.html">
+												<div class="grid-img">
+													<img  src="wp-content/themes/storefront/source/images/s2.jpg" class="img-responsive" alt="">
+												</div>
+												<div class="grid-img">
+													<img  src="wp-content/themes/storefront/source/images/s1.jpg" class="img-responsive"  alt="">
+												</div>			
+											</a>		
+										</figure>	
+									</div>
+									<div class="ribben1">
+										<p>SALE</p>
+									</div>
+									<div class="block">
+										<div class="starbox small ghosting"> </div>
+									</div>
+									<div class="women">
+										<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3 arrival-grid simpleCart_shelfItem">
+								<div class="grid-arr">
+									<div  class="grid-arrival">
+										<figure>		
+											<a href="single.html">
+												<div class="grid-img">
+													<img  src="wp-content/themes/storefront/source/images/s4.jpg" class="img-responsive" alt="">
+												</div>
+												<div class="grid-img">
+													<img  src="wp-content/themes/storefront/source/images/s3.jpg" class="img-responsive"  alt="">
+												</div>			
+											</a>		
+										</figure>	
+									</div>
+									<div class="ribben">
+										<p>NEW</p>
+									</div>
+									<div class="block">
+										<div class="starbox small ghosting"> </div>
+									</div>
+									<div class="women">
+										<h6><a href="single.html">Sed ut perspiciatis unde</a></h6>
+										<span class="size">XL / XXL / S </span>
+										<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+										<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+									</div>
+								</div>
+							</div>
+							<div class="clearfix"></div>
 						</div>
 					</div>
-					
+				</div>
+
 				<?php endwhile; ?>
 		<?php wp_reset_query(); ?>
 	<?php

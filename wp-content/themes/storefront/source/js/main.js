@@ -1,11 +1,12 @@
 (function($) {
- 
- 	$("#slider").responsiveSlides({
-      	auto: true,
-      	nav: true,
-      	speed: 500,
-        namespace: "callbacks",
-        pager: true,
+
+$(document).ready(function(){
+	$("#slider").responsiveSlides({
+	  	auto: true,
+	  	nav: true,
+	  	speed: 500,
+	    namespace: "callbacks",
+	    pager: true,
     });
 
     $('.starbox').each(function() {
@@ -31,6 +32,10 @@
 	  interval: 3000,
 	  controlNavEnabled: true
 	});
+});
+	
+ 
+ 
 
 })(jQuery);
 
