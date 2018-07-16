@@ -39,9 +39,6 @@ Template Name: home page
 			<!--content-->
 		<div class="content">
 			<!--banner-bottom-->
-
-
-
 				<div class="ban-bottom-w3l">
 					<div class="container">
 
@@ -175,9 +172,9 @@ Template Name: home page
 												<h6><a href="single.html"><?php the_title(); ?></a></h6>
 												<span class="size">XL / XXL / S </span>
 												<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
-												<!-- <a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a> -->
-												<a href="/shop/?add-to-cart=<?= $id ?>" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="<?= $id ?>" data-product_sku="" aria-label="<?= get_the_title() ?>" rel="nofollow">Add to cart</a>
 
+												<a><?php echo do_shortcode( "[ajax_add_to_cart id='$post->ID' text='Buy']" );
+												 ?></a>
 											</div>
 										</div>
 									</div>
