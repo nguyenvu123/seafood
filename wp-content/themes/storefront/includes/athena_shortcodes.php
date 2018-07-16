@@ -168,3 +168,6 @@ function athena_product_categories_functions( $atts ) {
 }
 add_shortcode( 'athena_product_categories', 'athena_product_categories_functions' );
 ?>
+
+
+
