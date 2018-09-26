@@ -171,39 +171,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</form>
 							</div>	
 						</div>
-						<!-- <div class="header-right2">
+
+
+						<div class="header-right2">
 							<div class="cart box_1">
-								<a href="checkout.html">
-									<h3> <div class="total">
-										<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-										<img src="wp-content/themes/storefront/source/images/bag.png" alt="" />
-									</h3>
-								</a>
-								<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-								<div class="clearfix"> </div>
-							</div>	
-						</div> -->
-						<?php 
-							if ( storefront_is_woocommerce_activated() ) {
-								if ( is_cart() ) {
-									$class = 'current-menu-item';
-								} else {
-									$class = '';
-								}
-							?>
-							<div class="cart box_1">
-								<ul id="site-header-cart" class="site-header-cart menu">
-									<li class="<?php echo esc_attr( $class ); ?>">
-										<?php storefront_cart_link(); ?>
-									</li>
-									<li>
-										<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
-									</li>
-								</ul>
-							</div>
-							<?php
-							}
-						 ?>
+								<?php  
+
+								if ( storefront_is_woocommerce_activated() ) {
+									if ( is_cart() ) {
+										$class = 'current-menu-item';
+									} else {
+										$class = '';
+									}
+								?>
+						<ul id="site-header-cart" class="site-header-cart menu">
+							<li class="<?php echo esc_attr( $class ); ?>">
+								<?php storefront_cart_link(); ?>
+							</li>
+							<li>
+								<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+							</li>
+						</ul>
+						<?php } ?>
+					</div>
+				</div>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
