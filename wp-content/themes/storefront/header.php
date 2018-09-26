@@ -171,7 +171,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</form>
 							</div>	
 						</div>
-						<div class="header-right2">
+						<!-- <div class="header-right2">
 							<div class="cart box_1">
 								<a href="checkout.html">
 									<h3> <div class="total">
@@ -182,7 +182,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
 								<div class="clearfix"> </div>
 							</div>	
-						</div>
+						</div> -->
+						<?php 
+							if ( storefront_is_woocommerce_activated() ) {
+								if ( is_cart() ) {
+									$class = 'current-menu-item';
+								} else {
+									$class = '';
+								}
+							?>
+							<div class="cart box_1">
+								<ul id="site-header-cart" class="site-header-cart menu">
+									<li class="<?php echo esc_attr( $class ); ?>">
+										<?php storefront_cart_link(); ?>
+									</li>
+									<li>
+										<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+									</li>
+								</ul>
+							</div>
+							<?php
+							}
+						 ?>
 						<div class="clearfix"> </div>
 					</div>
 				</div>
