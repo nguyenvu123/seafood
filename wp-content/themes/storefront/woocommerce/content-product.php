@@ -27,6 +27,9 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
+
+	
+
 <li <?php post_class(); ?>>
 	<?php
 	/**
@@ -68,3 +71,4 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
 </li>
+

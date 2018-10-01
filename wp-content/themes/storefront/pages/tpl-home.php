@@ -121,9 +121,9 @@ Template Name: home page
 			<!--new-arrivals-->
 
 
-							<div class="new-arrivals-w3agile">
+				<div class="new-arrivals-w3agile">
 					<div class="container">
-						<h2 class="tittle">New Arrivals</h2>
+						<h2 class="tittle">Sản phẩm mới nhất!</h2>
 						<div class="arrivals-grids">
 
 							<?php 
@@ -173,7 +173,7 @@ Template Name: home page
 												<span class="size">XL / XXL / S </span>
 												<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
 
-												<a><?php echo do_shortcode( "[ajax_add_to_cart id='$post->ID' text='Buy']" );
+												<a><?php echo do_shortcode( "[ajax_add_to_cart id='$post->ID' text='Mua ngay!']" );
 												 ?></a>
 											</div>
 										</div>
@@ -207,7 +207,7 @@ Template Name: home page
 			<!--Products-->
 			<div class="latest-w3">
 				<div class="container">
-					<h3 class="tittle1">Mặt hàng bán chạy nhất</h3>
+					<h3 class="tittle1">Sản phẩm</h3>
 					<div class="latest-grids">
 						<div class="col-md-4 latest-grid">
 							<div class="latest-top">

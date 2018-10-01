@@ -50,13 +50,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header-top">
 				<div class="container">
 					 <div class="top-left">
-						<a href="#"> Help  <i class="glyphicon glyphicon-phone" aria-hidden="true"></i> +0123-456-789</a>
+					 <span>Help  <i class="fa fa-phone" aria-hidden="true"></i> </span><a href="#">+0123-456-789</a>
 					</div>
 					<div class="top-right">
 					<ul>
-						<li><a href="checkout.html">Checkout</a></li>
-						<li><a href="login.html">Login</a></li>
-						<li><a href="registered.html"> Create Account </a></li>
+						<li><a href="#"><i class="icon1 fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="icon1 fa fa-envelope" aria-hidden="true"></i></i></a></li>
+						<li><a href="#"><i class="icon1 fa fa-twitter" aria-hidden="true"></i></a></li>
 					</ul>
 					</div>
 					<div class="clearfix"></div>
@@ -66,7 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="container">
 					<div class="logo-nav">
 						<div class="logo-nav-left">
-							<h1><a href="index.html">New Shop <span>Shop anywhere</span></a></h1>
+							<h1><a href="/">Shop Nhật <span>Shop anywhere</span></a></h1>
 						</div>
 						<div class="logo-nav-left1">
 							<nav class="navbar navbar-default">
@@ -81,83 +81,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div> 
 							<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
 								<ul class="nav navbar-nav">
-									<li class="active"><a href="index.html" class="act">Home</a></li>	
-									<!-- Mega Menu -->
-									<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Women<b class="caret"></b></a>
-										<ul class="dropdown-menu multi-column columns-3">
-											<div class="row">
-												<div class="col-sm-3  multi-gd-img">
-													<ul class="multi-column-dropdown">
-														<h6>Submenu1</h6>
-														<li><a href="products.html">Clothing</a></li>
-														<li><a href="products.html">Wallets</a></li>
-														<li><a href="products.html">Shoes</a></li>
-														<li><a href="products.html">Watches</a></li>
-														<li><a href="products.html"> Underwear </a></li>
-														<li><a href="products.html">Accessories</a></li>
-													</ul>
-												</div>
-												<div class="col-sm-3  multi-gd-img">
-													<ul class="multi-column-dropdown">
-														<h6>Submenu2</h6>
-														<li><a href="products.html">Sunglasses</a></li>
-														<li><a href="products.html">Wallets,Bags</a></li>
-														<li><a href="products.html">Footwear</a></li>
-														<li><a href="products.html">Watches</a></li>
-														<li><a href="products.html">Accessories</a></li>
-														<li><a href="products.html">Jewellery</a></li>
-													</ul>
-												</div>
-												<div class="col-sm-3  multi-gd-img">
-														<a href="products.html"><img src="wp-content/themes/storefront/source/images/woo.jpg" alt=" "/></a>
-												</div> 
-												<div class="col-sm-3  multi-gd-img">
-														<a href="products.html"><img src="wp-content/themes/storefront/source/images/woo1.jpg" alt=" "/></a>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</ul>
-									</li>
-									<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Men <b class="caret"></b></a>
-										<ul class="dropdown-menu multi-column columns-3">
-											<div class="row">
-												<div class="col-sm-3  multi-gd-img">
-													<ul class="multi-column-dropdown">
-														<h6>Submenu1</h6>
-														<li><a href="products.html">Clothing</a></li>
-														<li><a href="products.html">Wallets</a></li>
-														<li><a href="products.html">Shoes</a></li>
-														<li><a href="products.html">Watches</a></li>
-														<li><a href="products.html"> Underwear </a></li>
-														<li><a href="products.html">Accessories</a></li>
-													</ul>
-												</div>
-												<div class="col-sm-3  multi-gd-img">
-													<ul class="multi-column-dropdown">
-														<h6>Submenu2</h6>
-														<li><a href="products.html">Sunglasses</a></li>
-														<li><a href="products.html">Wallets,Bags</a></li>
-														<li><a href="products.html">Footwear</a></li>
-														<li><a href="products.html">Watches</a></li>
-														<li><a href="products.html">Accessories</a></li>
-														<li><a href="products.html">Jewellery</a></li>
-													</ul>
-												</div>
-												<div class="col-sm-3  multi-gd-img">
-														<a href="products1.html"><img src="wp-content/themes/storefront/source/images/woo3.jpg" alt=" "/></a>
-												</div> 
-												<div class="col-sm-3  multi-gd-img">
-														<a href="products1.html"><img src="wp-content/themes/storefront/source/images/woo4.jpg" alt=" "/></a>
-												</div>
-												<div class="clearfix"></div>
-											</div>
-										</ul>
-									</li>
-									<li><a href="codes.html">Short Codes</a></li>
-									<li><a href="mail.html">Mail Us</a></li>
-								</ul>
+									<?php 
+									wp_nav_menu( array(
+									    'menu' => 'menu-main',
+									    'container' => 'ul',
+									    'menu_class'=> 'nav navbar-nav'
+									 ) ); ?>
 							</div>
 							</nav>
 						</div>
@@ -166,9 +95,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a class="cd-search-trigger" href="#cd-search"> <span></span></a></li>
 							</ul> <!-- cd-header-buttons -->
 							<div id="cd-search" class="cd-search">
-								<form action="#" method="post">
-									<input name="Search" type="search" placeholder="Search...">
-								</form>
+							<!-- 	<form action="#" method="post"> -->
+									<!-- <input name="s" type="search" placeholder="Search..."> -->
+									<?php echo do_shortcode('[smart_search id="1"]'); ?>
+								<!-- </form> -->
 							</div>	
 						</div>
 

@@ -167,20 +167,7 @@ Template Name: list product
 										<div class="clearfix"> </div>
 									</div>
 								</div>
-								<div class="brand-w3l">
-									<h3>Brands Filter</h3>
-									<ul>
-										<li><a href="#">Ralph Lauren</a></li>
-										<li><a href="#">adidas</a></li>
-										<li><a href="#">Bottega Veneta</a></li>
-										<li><a href="#">Valentino</a></li>
-										<li><a href="#">Nike</a></li>
-										<li><a href="#">Burberry</a></li>
-										<li><a href="#">Michael Kors</a></li>
-										<li><a href="#">Louis Vuitton</a></li>
-										<li><a href="#">Jimmy Choo</a></li>
-									</ul>
-								</div>
+							
 								<div class="cat-img">
 									<img class="img-responsive " src="images/45.jpg" alt="">
 								</div>
@@ -201,8 +188,6 @@ Template Name: list product
 									<div id="myTabContent" class="tab-content">
 										<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
 
-										
-
 											<div class="product-tab">
 													<?php 
 												   $args = array(
@@ -217,20 +202,18 @@ Template Name: list product
 													$my_query = new WP_Query( $args );
 													if ($my_query->have_posts()) {
 														while ( $my_query->have_posts() ) : $my_query->the_post(); 
-
-													
-
 												?>
 												<div class="col-md-4 product-tab-grid simpleCart_shelfItem">
 													<div class="grid-arr">
+														<?php $img = get_the_post_thumbnail_url(get_the_ID()); ?>
 														<div  class="grid-arrival">
 															<figure>		
 																<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
 																	<div class="grid-img">
-																		<img  src="images/p6.jpg" class="img-responsive" alt="">
+																		<img  src="<?= $img ?>" class="img-responsive" alt="">
 																	</div>
 																	<div class="grid-img">
-																		<img  src="images/p5.jpg" class="img-responsive"  alt="">
+																		<img  src="<?= $img ?>" class="img-responsive"  alt="">
 																	</div>			
 																</a>		
 															</figure>	
@@ -242,7 +225,7 @@ Template Name: list product
 															<h6><a href="single.html"><?php the_title(); ?></a></h6>
 															<span class="size">XL / XXL / S </span>
 															<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
-															<a href="#" data-text="Add To Cart" class="my-cart-b item_add">Add To Cart</a>
+															<a href="#" data-text="Add To Cart" class="my-cart-b item_add"><?php echo do_shortcode( "[ajax_add_to_cart id='$post->ID' text='Mua ngay!']" ); ?></a>
 														</div>
 													</div>
 												</div>

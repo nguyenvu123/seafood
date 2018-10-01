@@ -1,0 +1,14 @@
+.right-sidebar .content-area {
+  background: #F9F8F8; }
+
+.woocommerce-Price-amount.amount {
+  color: black; }
+
+a:hover, a:focus {
+  color: black !important;
+  text-decoration: none !important; }
+
+.ysm-search-widget .search-field[type="search"] {
+  background: none 50% 50% no-repeat white;
+  border: 1px solid #1565c0;
+  color: black; }
