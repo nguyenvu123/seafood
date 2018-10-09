@@ -8,13 +8,8 @@
 	{
 	    return __( 'Thêm Giỏ Hàng', 'woocommerce' );
 	}
-	// function filter_single_product_archive_thumbnail_size( $size ) { 
-	//     // make filter magic happen here... 
-	//     return 'thumbnail'; 
-	// }; 
-	         
-	// // add the filter 
-	// add_filter( 'single_product_archive_thumbnail_size', 'filter_single_product_archive_thumbnail_size', 10, 1 );
+	add_image_size('img_home_category', 350, 235);
+	add_image_size('img_home_produce', 200, 240); 
 
 
 ?>

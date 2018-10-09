@@ -15,3 +15,6 @@ a:hover, a:focus {
     border: 1px solid #1565c0;
     color: black;
 }
+.site-header-cart .cart-contents:after,
+.storefront-handheld-footer-bar ul li.cart > a:before {
+content: "\f07a"; 

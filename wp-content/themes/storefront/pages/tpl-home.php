@@ -53,13 +53,15 @@ Template Name: home page
 
 						<div class="col-md-6 ban-bottom">
 							<div class="ban-top">
+
 								<?php $thumb_id = get_woocommerce_term_meta( $terms_category_hot[0]->term_id, 'thumbnail_id', true );
 								
                                 $term_img = wp_get_attachment_url(  $thumb_id );
-                                
-                                 ?>
+                            
+                                ?>
 
-								<img src="<?= $term_img; ?>" class="img-responsive" alt=""/>
+
+								<a href="<?= get_term_link( $terms_category_hot[0]->slug, 'product_cat' ) ?>"><img src="<?= $term_img; ?>" class="img-responsive" alt=""/></a>
 								<div class="ban-text">
 									<h4><?= $terms_category_hot[0]->name; ?></h4>
 								</div>
@@ -75,7 +77,7 @@ Template Name: home page
                                 $term_img1 = wp_get_attachment_url(  $thumb_id1 );
                                 
                                  ?>
-								<img src="<?= $term_img1  ?>" class="img-responsive" alt=""/>
+									<a href="<?= get_term_link( $terms_category_hot[1]->slug, 'product_cat' ) ?>"><img src="<?= $term_img1  ?>" class="img-responsive" alt=""/></a>
 								<div class="ban-text1">
 									<h4><?= $terms_category_hot[1]->name; ?></h4>
 								</div>
@@ -101,7 +103,7 @@ Template Name: home page
 		                                $term_img3 = wp_get_attachment_url(  $thumb_id3 );
 		                                
 		                                 ?>
-										<img src="<?= $term_img3 ?>" class="img-responsive" alt=""/>
+											<a href="<?= get_term_link( $terms_category_hot[3]->slug, 'product_cat' ) ?>"><img src="<?= $term_img3 ?>" class="img-responsive" alt=""/></a>
 										<div class="ban-text1">
 											<h4><?= $terms_category_hot[3]->name; ?></h4>
 										</div>
@@ -142,17 +144,32 @@ Template Name: home page
 										$Check_sale = wc_get_product($post->ID)->is_on_sale();
 										$id = get_the_ID();
 										?>
+										<?php
+
+										    global $product;
+
+										    $attachment_ids = $product->get_gallery_attachment_ids();
+
+										    
+										?>
 									<div class="col-md-3 arrival-grid simpleCart_shelfItem">
 										<div class="grid-arr">
 											<div  class="grid-arrival">
 												<figure>		
 													<a href="#" class="new-gri" data-toggle="modal" data-target="#myModal1">
 														<div class="grid-img">
-															<?php $img = get_the_post_thumbnail_url(get_the_ID()); ?>
+															<?php $img = get_the_post_thumbnail_url(get_the_ID(),'img_home_produce'); ?>
+
 															<img  src="<?= $img ?>" class="img-responsive" alt="">
 														</div>
 														<div class="grid-img">
-															<img  src="<?= $img ?>" class="img-responsive"  alt="">
+															<?php foreach( $attachment_ids as $attachment_id ) {
+										        			$image_link = wp_get_attachment_image_src( $attachment_id,'img_home_produce' );?>
+
+										        			<img  src="<?= $image_link[0] ?>" class="img-responsive"  alt="">
+										        			<?php
+										    				} ?>
+															
 														</div>			
 													</a>		
 												</figure>	
@@ -170,9 +187,17 @@ Template Name: home page
 											</div>
 											<div class="women">
 												<h6><a href="single.html"><?php the_title(); ?></a></h6>
-												<span class="size">XL / XXL / S </span>
-												<p ><del>$100.00</del><em class="item_price">$70.00</em></p>
+												<?php if($Check_sale){ ?>
+												<p ><del><?=$product->get_price(); ?>đ</del>  
+													
+													<em class="item_price"><?= $product->get_sale_price(); ?>đ</em>
 
+												</p>
+											<?php }else{
+											 ?>
+											 <p><em class="item_price"><?= $product->get_price(); ?>đ</em></p>
+												
+											<?php } ?>
 												<a><?php echo do_shortcode( "[ajax_add_to_cart id='$post->ID' text='Mua ngay!']" );
 												 ?></a>
 											</div>
@@ -209,82 +234,38 @@ Template Name: home page
 				<div class="container">
 					<h3 class="tittle1">Sản phẩm</h3>
 					<div class="latest-grids">
+						
+						<?php 	
+						$countterms = wp_count_terms( 'product_cat' );
+						$offset = 4;
+						$number = $countterms - $offset;
+						$terms_list_category = get_terms( array(
+						    'taxonomy' => 'product_cat',
+						    'hide_empty' => false,
+						    'offset'     => $offset,
+      						'number'     => $number
+							) );
+    					?>
+    					<?php foreach( $terms_list_category as $category ): ?>
 						<div class="col-md-4 latest-grid">
 							<div class="latest-top">
-								<img  src="wp-content/themes/storefront/source/images/l1.jpg" class="img-responsive"  alt="">
+								<?php 
+								$thumb_id1 = get_woocommerce_term_meta( $category->term_id, 'thumbnail_id', true );
+								
+                                $term_img1 = wp_get_attachment_image_src(  $thumb_id1, 'img_home_category' ); ?>
+                          
+                                <a href="<?= get_term_link( $category->slug, 'product_cat' ) ?>"><img  src="<?= $term_img1[0]; ?>" class="img-responsive"  alt="shop-nhat"></a>
+								
 								<div class="latest-text">
-									<h4>Men</h4>
-								</div>
-								<div class="latest-text2 hvr-sweep-to-top">
-									<h4>-50%</h4>
+									<h4><?= $category->name; ?></h4>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4 latest-grid">
-							<div class="latest-top">
-								<img  src="wp-content/themes/storefront/source/images/l2.jpg" class="img-responsive"  alt="">
-								<div class="latest-text">
-									<h4>Shoes</h4>
-								</div>
-								<div class="latest-text2 hvr-sweep-to-top">
-									<h4>-20%</h4>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 latest-grid">
-							<div class="latest-top">
-								<img  src="wp-content/themes/storefront/source/images/l3.jpg" class="img-responsive"  alt="">
-								<div class="latest-text">
-									<h4>Women</h4>
-								</div>
-								<div class="latest-text2 hvr-sweep-to-top">
-									<h4>-50%</h4>
-								</div>
-							</div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-					<div class="latest-grids">
-						<div class="col-md-4 latest-grid">
-							<div class="latest-top">
-								<img  src="wp-content/themes/storefront/source/images/l4.jpg" class="img-responsive"  alt="">
-								<div class="latest-text">
-									<h4>Watch</h4>
-								</div>
-								<div class="latest-text2 hvr-sweep-to-top">
-									<h4>-45%</h4>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 latest-grid">
-							<div class="latest-top">
-								<img  src="wp-content/themes/storefront/source/images/l5.jpg" class="img-responsive"  alt="">
-								<div class="latest-text">
-									<h4>Bag</h4>
-								</div>
-								<div class="latest-text2 hvr-sweep-to-top">
-									<h4>-10%</h4>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 latest-grid">
-							<div class="latest-top">
-								<img  src="wp-content/themes/storefront/source/images/l6.jpg" class="img-responsive"  alt="">
-								<div class="latest-text">
-									<h4>Cameras</h4>
-								</div>
-								<div class="latest-text2 hvr-sweep-to-top">
-									<h4>-30%</h4>
-								</div>
-							</div>
-						</div>
+					<?php endforeach; ?>
+
 						<div class="clearfix"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
-		<!--copy-->
-					
-		<!--copy-->
 <?php get_footer(); ?>
