@@ -188,14 +188,14 @@ Template Name: home page
 											<div class="women">
 												<h6><a href="single.html"><?php the_title(); ?></a></h6>
 												<?php if($Check_sale){ ?>
-												<p ><del><?=$product->get_price(); ?>đ</del>  
+												<p ><del><?=number_format((float)$product->get_price()); ?>đ</del>  
 													
-													<em class="item_price"><?= $product->get_sale_price(); ?>đ</em>
+													<em class="item_price"><?=number_format((float)$product->get_sale_price()); ?>đ</em>
 
 												</p>
 											<?php }else{
 											 ?>
-											 <p><em class="item_price"><?= $product->get_price(); ?>đ</em></p>
+											 <p><em class="item_price"><?=number_format((float)$product->get_price()) ; ?>đ</em></p>
 												
 											<?php } ?>
 												<a><?php echo do_shortcode( "[ajax_add_to_cart id='$post->ID' text='Mua ngay!']" );
